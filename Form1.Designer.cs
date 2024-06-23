@@ -43,9 +43,10 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.OpenDir = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.CFGDir = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Initialize
@@ -62,20 +63,20 @@
             // 
             this.ConfigList.FormattingEnabled = true;
             this.ConfigList.ItemHeight = 12;
-            this.ConfigList.Location = new System.Drawing.Point(12, 36);
+            this.ConfigList.Location = new System.Drawing.Point(12, 61);
             this.ConfigList.Name = "ConfigList";
-            this.ConfigList.Size = new System.Drawing.Size(279, 88);
+            this.ConfigList.Size = new System.Drawing.Size(279, 160);
             this.ConfigList.TabIndex = 1;
             this.ConfigList.SelectedIndexChanged += new System.EventHandler(this.ConfigList_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 12);
+            this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 12);
+            this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 2;
-            this.label1.Text = "ConfigDir:";
+            this.label1.Text = "CSDir:";
             // 
             // Dir
             // 
@@ -120,7 +121,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 131);
+            this.label2.Location = new System.Drawing.Point(10, 230);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 12);
             this.label2.TabIndex = 7;
@@ -128,15 +129,15 @@
             // 
             // CFGName
             // 
-            this.CFGName.Location = new System.Drawing.Point(90, 128);
+            this.CFGName.Location = new System.Drawing.Point(83, 227);
             this.CFGName.Name = "CFGName";
-            this.CFGName.Size = new System.Drawing.Size(201, 21);
+            this.CFGName.Size = new System.Drawing.Size(208, 21);
             this.CFGName.TabIndex = 8;
             // 
             // Create
             // 
             this.Create.Enabled = false;
-            this.Create.Location = new System.Drawing.Point(297, 128);
+            this.Create.Location = new System.Drawing.Point(297, 225);
             this.Create.Name = "Create";
             this.Create.Size = new System.Drawing.Size(75, 23);
             this.Create.TabIndex = 9;
@@ -147,7 +148,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 153);
+            this.label3.Location = new System.Drawing.Point(10, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(359, 36);
             this.label3.TabIndex = 10;
@@ -157,7 +158,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(144, 177);
+            this.linkLabel1.Location = new System.Drawing.Point(146, 275);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(29, 12);
             this.linkLabel1.TabIndex = 11;
@@ -168,7 +169,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(180, 177);
+            this.linkLabel2.Location = new System.Drawing.Point(181, 275);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(41, 12);
             this.linkLabel2.TabIndex = 12;
@@ -179,7 +180,7 @@
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(228, 177);
+            this.linkLabel3.Location = new System.Drawing.Point(228, 275);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(35, 12);
             this.linkLabel3.TabIndex = 13;
@@ -187,34 +188,54 @@
             this.linkLabel3.Text = "UNRWA";
             this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(269, 180);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 73);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 193);
+            this.label4.ForeColor = System.Drawing.Color.IndianRed;
+            this.label4.Location = new System.Drawing.Point(10, 287);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(239, 60);
+            this.label4.Size = new System.Drawing.Size(371, 36);
             this.label4.TabIndex = 15;
-            this.label4.Text = "In addition, we hope that you contact \r\npublic opinion representatives in your \r\n" +
-    "area to convey your concerns about \r\nchildren in Palestine and urge your \r\ngover" +
-    "nment to take action for peace.";
+            this.label4.Text = "In addition, we hope that you contact public opinion \r\nrepresentatives in your ar" +
+    "ea to convey your concerns about \r\nchildren in Palestine and urge the government" +
+    " to take action.";
+            // 
+            // OpenDir
+            // 
+            this.OpenDir.Enabled = false;
+            this.OpenDir.Location = new System.Drawing.Point(297, 128);
+            this.OpenDir.Name = "OpenDir";
+            this.OpenDir.Size = new System.Drawing.Size(75, 23);
+            this.OpenDir.TabIndex = 16;
+            this.OpenDir.Text = "OpenDir";
+            this.OpenDir.UseVisualStyleBackColor = true;
+            this.OpenDir.Click += new System.EventHandler(this.OpenDir_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 12);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "ConfigDir:";
+            // 
+            // CFGDir
+            // 
+            this.CFGDir.Location = new System.Drawing.Point(83, 37);
+            this.CFGDir.Name = "CFGDir";
+            this.CFGDir.Size = new System.Drawing.Size(208, 21);
+            this.CFGDir.TabIndex = 18;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 261);
+            this.ClientSize = new System.Drawing.Size(384, 326);
+            this.Controls.Add(this.CFGDir);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.OpenDir);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
@@ -234,7 +255,6 @@
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "FALITATA Config Loader";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,8 +276,10 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button OpenDir;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox CFGDir;
     }
 }
 

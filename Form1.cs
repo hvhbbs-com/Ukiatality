@@ -27,6 +27,7 @@ namespace Ukiatality
             // find config dir
             string myDocumentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
             string targetFolderPath = Path.Combine(myDocumentsPath, "FALITATA");
+            CFGDir.Text = targetFolderPath;
             if (!Directory.Exists(targetFolderPath))
             {
                 Directory.CreateDirectory(targetFolderPath);
@@ -40,6 +41,7 @@ namespace Ukiatality
                 ConfigList.Items.Add(fileName);
             }
             Refresh.Enabled = true;
+            OpenDir.Enabled = true;
             Create.Enabled = true;
             // find cs dir
             string processName = "CS2.EXE";
@@ -71,10 +73,8 @@ namespace Ukiatality
 
                 string configFile = Path.Combine(Dir.Text, "fatal_settings.cfg");
                 string content = File.ReadAllText(configFile);
-                string ConfigName = (string)ConfigList.SelectedItem;
-                string myDocumentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
-                string targetFolderPath = Path.Combine(myDocumentsPath, "FALITATA");
-                string configPath = Path.Combine(targetFolderPath, ConfigName);
+                string ConfigName = CFGName.Text;
+                string configPath = Path.Combine(CFGDir.Text, ConfigName);
 
                 File.WriteAllText(configPath, content);
 
@@ -111,10 +111,8 @@ namespace Ukiatality
             {
 
                 string configFile = Path.Combine(Dir.Text, "fatal_settings.cfg");
-                string ConfigName = ConfigList.SelectedItem.ToString();
-                string myDocumentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
-                string targetFolderPath = Path.Combine(myDocumentsPath, "FALITATA");
-                string configPath = Path.Combine(targetFolderPath, ConfigName);
+                string ConfigName = CFGName.Text;
+                string configPath = Path.Combine(CFGDir.Text, ConfigName);
                 string fileContent = File.ReadAllText(configPath);
 
                 File.WriteAllText(configFile, fileContent);
@@ -128,9 +126,7 @@ namespace Ukiatality
 
         private void Create_Click(object sender, EventArgs e)
         {
-            string myDocumentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
-            string targetFolderPath = Path.Combine(myDocumentsPath, "FALITATA");
-            string configFile = Path.Combine(targetFolderPath, CFGName.Text);
+            string configFile = Path.Combine(CFGDir.Text, CFGName.Text);
             if (!File.Exists(configFile) && CFGName.Text != "Config already exist!!")
             {
                 // create file
@@ -164,6 +160,11 @@ namespace Ukiatality
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://donate.unrwa.org/gaza/~my-donation");
+        }
+
+        private void OpenDir_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("explorer.exe", CFGDir.Text);
         }
     }
 }
