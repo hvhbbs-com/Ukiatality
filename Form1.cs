@@ -87,15 +87,12 @@ namespace Ukiatality
 
         private void Refresh_Click(object sender, EventArgs e)
         {
-            // find config dir
-            string myDocumentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
-            string targetFolderPath = Path.Combine(myDocumentsPath, "FALITATA");
-            if (!Directory.Exists(targetFolderPath))
+            if (!Directory.Exists(CFGDir.Text))
             {
-                Directory.CreateDirectory(targetFolderPath);
+                Directory.CreateDirectory(CFGDir.Text);
             }
             // list all config
-            string[] cfgFiles = Directory.GetFiles(targetFolderPath, "*", SearchOption.AllDirectories);
+            string[] cfgFiles = Directory.GetFiles(CFGDir.Text, "*", SearchOption.AllDirectories);
             ConfigList.Items.Clear();
             foreach (string cfgFile in cfgFiles)
             {
@@ -165,6 +162,14 @@ namespace Ukiatality
         private void OpenDir_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("explorer.exe", CFGDir.Text);
+            // list all config
+            string[] cfgFiles = Directory.GetFiles(CFGDir.Text, "*", SearchOption.AllDirectories);
+            ConfigList.Items.Clear();
+            foreach (string cfgFile in cfgFiles)
+            {
+                string fileName = Path.GetFileName(cfgFile);
+                ConfigList.Items.Add(fileName);
+            }
         }
     }
 }
