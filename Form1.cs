@@ -138,6 +138,18 @@ namespace Ukiatality
             {
                 CFGName.Text = "Config already exist!!";
             }
+            if (!Directory.Exists(CFGDir.Text))
+            {
+                Directory.CreateDirectory(CFGDir.Text);
+            }
+            // list all config
+            string[] cfgFiles = Directory.GetFiles(CFGDir.Text, "*", SearchOption.AllDirectories);
+            ConfigList.Items.Clear();
+            foreach (string cfgFile in cfgFiles)
+            {
+                string fileName = Path.GetFileName(cfgFile);
+                ConfigList.Items.Add(fileName);
+            }
         }
 
         private void ConfigList_SelectedIndexChanged(object sender, EventArgs e)
