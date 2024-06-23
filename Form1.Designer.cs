@@ -51,6 +51,7 @@
             // 
             // Initialize
             // 
+            this.Initialize.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Initialize.Location = new System.Drawing.Point(297, 7);
             this.Initialize.Name = "Initialize";
             this.Initialize.Size = new System.Drawing.Size(75, 23);
@@ -61,8 +62,8 @@
             // 
             // ConfigList
             // 
+            this.ConfigList.Font = new System.Drawing.Font("黑体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ConfigList.FormattingEnabled = true;
-            this.ConfigList.ItemHeight = 12;
             this.ConfigList.Location = new System.Drawing.Point(12, 61);
             this.ConfigList.Name = "ConfigList";
             this.ConfigList.Size = new System.Drawing.Size(279, 160);
@@ -72,9 +73,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("黑体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "CSDir:";
             // 
@@ -88,7 +90,8 @@
             // Load
             // 
             this.Load.Enabled = false;
-            this.Load.Location = new System.Drawing.Point(297, 41);
+            this.Load.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Load.Location = new System.Drawing.Point(297, 61);
             this.Load.Name = "Load";
             this.Load.Size = new System.Drawing.Size(75, 23);
             this.Load.TabIndex = 4;
@@ -99,7 +102,8 @@
             // Save
             // 
             this.Save.Enabled = false;
-            this.Save.Location = new System.Drawing.Point(297, 70);
+            this.Save.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Save.Location = new System.Drawing.Point(297, 90);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(75, 23);
             this.Save.TabIndex = 5;
@@ -110,7 +114,8 @@
             // Refresh
             // 
             this.Refresh.Enabled = false;
-            this.Refresh.Location = new System.Drawing.Point(297, 99);
+            this.Refresh.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Refresh.Location = new System.Drawing.Point(297, 119);
             this.Refresh.Name = "Refresh";
             this.Refresh.Size = new System.Drawing.Size(75, 23);
             this.Refresh.TabIndex = 6;
@@ -121,6 +126,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(10, 230);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 12);
@@ -129,14 +135,16 @@
             // 
             // CFGName
             // 
+            this.CFGName.Font = new System.Drawing.Font("黑体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.CFGName.Location = new System.Drawing.Point(83, 227);
             this.CFGName.Name = "CFGName";
-            this.CFGName.Size = new System.Drawing.Size(208, 21);
+            this.CFGName.Size = new System.Drawing.Size(208, 22);
             this.CFGName.TabIndex = 8;
             // 
             // Create
             // 
             this.Create.Enabled = false;
+            this.Create.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Create.Location = new System.Drawing.Point(297, 225);
             this.Create.Name = "Create";
             this.Create.Size = new System.Drawing.Size(75, 23);
@@ -148,9 +156,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(10, 251);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(359, 36);
+            this.label3.Size = new System.Drawing.Size(352, 42);
             this.label3.TabIndex = 10;
             this.label3.Text = "The Israeli occupation of Palestine has caused THOUSANDS OF\r\nCHILDREN to suffer w" +
     "hile u are enjoy your HvH gaming time. \r\nConsider helping them:";
@@ -158,7 +167,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(146, 275);
+            this.linkLabel1.Location = new System.Drawing.Point(146, 281);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(29, 12);
             this.linkLabel1.TabIndex = 11;
@@ -169,7 +178,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(181, 275);
+            this.linkLabel2.Location = new System.Drawing.Point(181, 281);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(41, 12);
             this.linkLabel2.TabIndex = 12;
@@ -180,7 +189,7 @@
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(228, 275);
+            this.linkLabel3.Location = new System.Drawing.Point(228, 281);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(35, 12);
             this.linkLabel3.TabIndex = 13;
@@ -191,10 +200,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.IndianRed;
-            this.label4.Location = new System.Drawing.Point(10, 287);
+            this.label4.Location = new System.Drawing.Point(10, 293);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(371, 36);
+            this.label4.Size = new System.Drawing.Size(346, 42);
             this.label4.TabIndex = 15;
             this.label4.Text = "In addition, we hope that you contact public opinion \r\nrepresentatives in your ar" +
     "ea to convey your concerns about \r\nchildren in Palestine and urge the government" +
@@ -203,7 +213,8 @@
             // OpenDir
             // 
             this.OpenDir.Enabled = false;
-            this.OpenDir.Location = new System.Drawing.Point(297, 128);
+            this.OpenDir.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.OpenDir.Location = new System.Drawing.Point(297, 148);
             this.OpenDir.Name = "OpenDir";
             this.OpenDir.Size = new System.Drawing.Size(75, 23);
             this.OpenDir.TabIndex = 16;
@@ -214,9 +225,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("黑体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.Location = new System.Drawing.Point(12, 40);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 12);
+            this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 17;
             this.label5.Text = "ConfigDir:";
             // 
@@ -231,7 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 326);
+            this.ClientSize = new System.Drawing.Size(384, 346);
             this.Controls.Add(this.CFGDir);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.OpenDir);
