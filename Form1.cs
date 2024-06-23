@@ -61,13 +61,13 @@ namespace Ukiatality
             }
             if (!foundProcess)
             {
-                Dir.Text = "Plz start CS2 first!!";
+                Dir.Text = "请先启动游戏!!";
             }
         }
 
         private void Save_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure to save?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("确定要保存参数吗?", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
 
@@ -103,7 +103,7 @@ namespace Ukiatality
 
         private void Load_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure to load?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("确定要加载参数吗?", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
 
@@ -124,7 +124,7 @@ namespace Ukiatality
         private void Create_Click(object sender, EventArgs e)
         {
             string configFile = Path.Combine(CFGDir.Text, CFGName.Text);
-            if (!File.Exists(configFile) && CFGName.Text != "Config already exist!!")
+            if (!File.Exists(configFile) && CFGName.Text != "参数名称重复!!")
             {
                 // create file
                 FileStream fs = File.Create(configFile);
@@ -132,7 +132,7 @@ namespace Ukiatality
             }
             else
             {
-                CFGName.Text = "Config already exist!!";
+                CFGName.Text = "参数名称重复!!";
             }
         }
 
@@ -144,20 +144,6 @@ namespace Ukiatality
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://www.pcrf.net/");
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://help.unicef.org/donate-to-children");
-        }
-
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://donate.unrwa.org/gaza/~my-donation");
-        }
 
         private void OpenDir_Click(object sender, EventArgs e)
         {
@@ -170,6 +156,11 @@ namespace Ukiatality
                 string fileName = Path.GetFileName(cfgFile);
                 ConfigList.Items.Add(fileName);
             }
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://hvhbbs.com");
         }
     }
 }
