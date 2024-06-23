@@ -129,6 +129,10 @@ namespace Ukiatality
                 // create file
                 FileStream fs = File.Create(configFile);
                 fs.Close(); // close file stream
+                string contentFile = Path.Combine(Dir.Text, "fatal_settings.cfg");
+                string content = File.ReadAllText(contentFile);
+
+                File.WriteAllText(configFile, content);
             }
             else
             {
